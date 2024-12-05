@@ -1,0 +1,69 @@
+{
+  "name": "finance-tracker",
+  "version": "0.1.0",
+  "description": "A finance tracker for mangs.",
+  "author": "JinmyeongYoon",
+  "private": true,
+  "homepage": "./",
+  "main": "main.js",
+  "build": {
+    "appId": "com.finance.tracker",
+    "productName": "Finance Tracker",
+    "files": [
+      "build/**/*",
+      "main.js",
+      "node_modules/**/*"
+    ],
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "financeico.ico"
+    }
+  },
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "react": "^18.3.1",
+    "react-calendar": "^4.0.0",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^7.0.2",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "electron-start": "electron .",
+    "electron-dev": "concurrently \"npm start\" \"npm run electron-start\"",
+    "build-react": "react-scripts build",
+    "dist": "npm run build-react && electron-builder"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0",
+    "electron": "^33.2.1",
+    "electron-builder": "^25.1.8"
+  }
+}
